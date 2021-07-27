@@ -1,0 +1,131 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+      240.9deg,
+      rgba(0, 71, 254, 0.9) -7.95%,
+      rgba(104, 64, 170, 0.9) 107.25%
+    )
+    no-repeat;
+  min-height: 100vh;
+}
+.hidden {
+  visibility: hidden;
+}
+.heading {
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+}
+p {
+  margin: 0;
+}
+.container {
+  padding: 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+.top_section {
+  text-align: center;
+  position: fixed;
+  width: inherit;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-family: "Poppins", sans-serif;
+}
+.top_section .text_input {
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  border-bottom: 1px solid #0060d1;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 768px) {
+  .top_section .text_input {
+    width: 600px;
+  }
+}
+.top_section .text_input:focus {
+  outline: none;
+}
+.top_section #add {
+  padding: 8px;
+  background: #0060d1;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-left: 5px;
+  box-shadow: 0px 4px 4px rgba(46, 8, 96, 0.25);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "poppins";
+}
+.todo_wrapper {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  background: #ededed;
+  box-shadow: 4px 4px 0px rgba(46, 8, 96, 0.25);
+  border-radius: 10px;
+  position: relative;
+  top: 125px;
+  height: 325px;
+  overflow: auto;
+}
+.todo_wrapper .bottom_section {
+  margin-top: 20px;
+  position: relative;
+}
+.todo_wrapper .bottom_section .notes .note {
+  padding: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  background: #dbe3eb;
+  box-shadow: 2px 2px 0px 0px #424242;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  border-radius: 10px;
+}
+.todo_wrapper .bottom_section .notes .note .close {
+  background: #e01b1b;
+  position: absolute;
+  top: 12px;
+  transform: translatey(-50%);
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 920px) {
+  .todo_wrapper .bottom_section .notes .note .close {
+    display: none;
+  }
+}
+@media screen and (min-width: 920px) {
+  .todo_wrapper .bottom_section .notes .note:hover .close {
+    display: block;
+  }
+}
+.todo_wrapper .bottom_section .notes .text-note {
+  max-width: 90%;
+  word-break: break-all;
+}
+ion-icon {
+  font-size: 24px;
+  color: #fff;
+}
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
